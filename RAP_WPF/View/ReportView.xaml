@@ -1,0 +1,105 @@
+﻿<Window x:Class="RAP_WPF.View.ReportView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RAP_WPF.View"
+        mc:Ignorable="d"
+        Title="Report" Height="450" Width="800">
+    <Grid>
+        <TabControl x:Name="ReportTab" SelectionChanged="ReportTab_SelectionChanged">
+            <!--Star Performer -->
+            <TabItem Name="StarPerformerTab" Header="Star Performer">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <ListView x:Name="StarPerformerListView" Margin="10,20">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Performance" Width="90" DisplayMemberBinding="{Binding Path=Performance}"/>
+                                    <GridViewColumn Header="Funding Received" Width="120" DisplayMemberBinding="{Binding Path=FundingReceived}"/>
+                                    <GridViewColumn Header="Name" Width="230" DisplayMemberBinding="{Binding Path=Fullname}"/>
+                                    <GridViewColumn Header="Email" Width="170" DisplayMemberBinding="{Binding Path=Email}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                    <Button Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100"/>
+                </Grid>
+            </TabItem>
+
+            <!--Meet Minimum -->
+            <TabItem Name="MeetMinimumTab" Header="Meet Minimum">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <ListView x:Name="MeetMinimumListView" Margin="10,20">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Performance" Width="90" DisplayMemberBinding="{Binding Path=Performance}"/>
+                                    <GridViewColumn Header="Funding Received" Width="120" DisplayMemberBinding="{Binding Path=FundingReceived}"/>
+                                    <GridViewColumn Header="Name" Width="230" DisplayMemberBinding="{Binding Path=Fullname}"/>
+                                    <GridViewColumn Header="Email" Width="170" DisplayMemberBinding="{Binding Path=Email}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                    <Button Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100"/>
+                </Grid>
+            </TabItem>
+
+
+            <!--Below Expectations -->
+            <TabItem Name="BelowExpectationsTab" Header="Below Expectations">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <ListView x:Name="BelowExpectationsListView" Margin="10,20">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Performance" Width="90" DisplayMemberBinding="{Binding Path=Performance}"/>
+                                    <GridViewColumn Header="Funding Received" Width="120" DisplayMemberBinding="{Binding Path=FundingReceived}"/>
+                                    <GridViewColumn Header="Name" Width="230" DisplayMemberBinding="{Binding Path=Fullname}"/>
+                                    <GridViewColumn Header="Email" Width="170" DisplayMemberBinding="{Binding Path=Email}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                    <Button Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100"/>
+                </Grid>
+            </TabItem>
+
+            <!--Poor -->
+            <TabItem Name="PoorTab" Header="Poor">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5.5*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <ListView x:Name="PoorListView" Margin="10,20">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Performance" Width="90" DisplayMemberBinding="{Binding Path=Performance}"/>
+                                    <GridViewColumn Header="Funding Received" Width="120" DisplayMemberBinding="{Binding Path=FundingReceived}"/>
+                                    <GridViewColumn Header="Name" Width="230" DisplayMemberBinding="{Binding Path=Fullname}"/>
+                                    <GridViewColumn Header="Email" Width="170" DisplayMemberBinding="{Binding Path=Email}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                    <Button Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="RAP_WPF.View.SupervisionsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RAP_WPF.View"
+        mc:Ignorable="d"
+        Title="Supervisions" Height="360" Width="480">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ListView x:Name="SupervisionListView" HorizontalAlignment="Center" Height="200" VerticalAlignment="Center" Width="300">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="300" DisplayMemberBinding="{Binding Path=Fullname}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Content="OK" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="50" Margin="0,20,0,0" Click="OKButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

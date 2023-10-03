@@ -1,0 +1,22 @@
+﻿<Window x:Class="RAP_WPF.View.CumNoOfPublicationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RAP_WPF.View"
+        mc:Ignorable="d"
+        Title="Number of Publication" Height="350" Width="350">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <ListView x:Name="CumNoOfPublicationListView">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Year" Width="50" DisplayMemberBinding="{Binding Path=Year}"/>
+                    <GridViewColumn Header="Cumulative number of Publication" DisplayMemberBinding="{Binding Path=NoOfPublication}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+            <Button Content="OK" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="50" Margin="0,20,0,0" Click="OKButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
