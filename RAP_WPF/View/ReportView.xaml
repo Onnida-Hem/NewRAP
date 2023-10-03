@@ -27,7 +27,7 @@
                             </ListView.View>
                         </ListView>
                     </StackPanel>
-                    <Button Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100"/>
+                    <Button x:Name="StarPerformerButton" Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100" Click="StarPerformerButton_Click"/>
                 </Grid>
             </TabItem>
 
@@ -50,7 +50,7 @@
                             </ListView.View>
                         </ListView>
                     </StackPanel>
-                    <Button Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100"/>
+                    <Button x:Name="MeetMinimumButton" Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10.666,10,10.667,0" Grid.Column="2" Background="DodgerBlue" Foreground="White" Height="25" Width="100" Click="MeetMinimumButton_Click"/>
                 </Grid>
             </TabItem>
 
@@ -74,7 +74,7 @@
                             </ListView.View>
                         </ListView>
                     </StackPanel>
-                    <Button Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100"/>
+                    <Button x:Name="BelowExpectationsButton" Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100" Click="BelowExpectationsButton_Click"/>
                 </Grid>
             </TabItem>
 
@@ -97,7 +97,7 @@
                             </ListView.View>
                         </ListView>
                     </StackPanel>
-                    <Button Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100"/>
+                    <Button x:Name="PoorButton" Content="Copy all emails" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10" Grid.Column="1" Background="DodgerBlue" Foreground="White" Height="25" Width="100" Click="PoorButton_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

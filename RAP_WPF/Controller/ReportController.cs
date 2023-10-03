@@ -41,9 +41,10 @@ namespace RAP_WPF.Controller
             }
         }
 
-        public List<string> CopyAllEmails()
+        public static List<string> CopyAllEmails(List<ReportPerformance> reports)
         {
-            return new List<string>();
+            var emails = reports.Select(r => r.Email).ToList();
+            return new List<string>(emails);
         }
     }
 }

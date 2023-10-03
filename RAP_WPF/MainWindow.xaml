@@ -49,8 +49,8 @@
                         <Label Content="Email:" HorizontalAlignment="Left" Margin="15,115,0,0" VerticalAlignment="Top"/>
                         <Label Content="{Binding Path=Email}" HorizontalAlignment="Left" Margin="190,115,0,0" VerticalAlignment="Top"/>
                         <Label Content="Current Job Title:" HorizontalAlignment="Left" Margin="15,140,0,0" VerticalAlignment="Top"/>
-                        <Label Content="{Binding Path=CurrentJobTitle}" HorizontalAlignment="Left" Margin="190,140,0,0" VerticalAlignment="Top"/>
-                        <Label Content="Commenced with instruction:" HorizontalAlignment="Left" Margin="15,165,0,0" VerticalAlignment="Top"/>
+                        <Label Name="CurrentJobTitle" HorizontalAlignment="Left" Margin="190,140,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Commenced with institution:" HorizontalAlignment="Left" Margin="15,165,0,0" VerticalAlignment="Top"/>
                         <Label Content="{Binding Path=FirstPositionStartDate}" ContentStringFormat="dd MMM yyyy" HorizontalAlignment="Left" Margin="190,165,0,0" VerticalAlignment="Top"/>
                         <Label Content="Commenced current position:" HorizontalAlignment="Left" Margin="15,190,0,0" VerticalAlignment="Top"/>
                         <Label Content="{Binding Path=CurrentPositionStartDate}" ContentStringFormat="dd MMM yyyy" HorizontalAlignment="Left" Margin="190,190,0,0" VerticalAlignment="Top"/>

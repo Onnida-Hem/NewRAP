@@ -139,6 +139,8 @@ namespace RAP_WPF
 
                 PhotoImage.Source = imageSource;
 
+                CurrentJobTitle.Content = Enum.JobTitle(SelectedResearcher.CurrentJobTitle);
+
                 if (researcher.Type == Enum.ResearcherType.Staff)
                 {
                     Staff staff = (Staff)SelectedResearcher;

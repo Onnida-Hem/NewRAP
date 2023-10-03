@@ -31,7 +31,7 @@ namespace RAP_WPF.Controller
 
             return filteredResearchers;
         }
-   
+
         //Yogeesha
         public static List<Researcher> FilterByLevel(JobLevel levelFilter, ResearcherType typeFilter)
         {
@@ -80,14 +80,26 @@ namespace RAP_WPF.Controller
         //Nida
         public static List<CumulativeCount> CalCumNoOfPublication()
         {
-            List<CumulativeCount> cum = PublicationController.selectedPublicationList
+            List<CumulativeCount> counts = PublicationController.selectedPublicationList
                         .GroupBy(p => p.PublicationYear)
                         .Select(g => new CumulativeCount
                         {
                             Year = g.Key,
                             NoOfPublication = g.Count()
                         })
+                        .OrderBy(p => p.Year)
                         .ToList();
+
+            List<CumulativeCount> cum = new List<CumulativeCount>();
+            int noOfPub = 0;
+            for (int i=0; i < counts.Count; i++)
+            {
+                CumulativeCount result = new CumulativeCount();
+                result.Year = counts[i].Year;
+                noOfPub = noOfPub + counts[i].NoOfPublication;
+                result.NoOfPublication = noOfPub;
+                cum.Add(result);
+            }
 
             return cum;
         }

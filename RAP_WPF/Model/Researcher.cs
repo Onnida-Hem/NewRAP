@@ -64,7 +64,7 @@ namespace RAP_WPF.Model
 
         public string Fullname
         {
-            get { return GivenName + ", " + FamilyName + " (" + ResearcherTitle + ")"; }
+            get { return FamilyName + ", " + GivenName + " (" + ResearcherTitle + ")"; }
         }
 
         /*

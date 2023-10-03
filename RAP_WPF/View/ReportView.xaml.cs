@@ -55,7 +55,8 @@ namespace RAP_WPF.View
             {
                 if (MeetMinimumReport == null)
                 {
-                    MeetMinimumListView.ItemsSource = ReportController.GenerateReport(ReportName.MeetingMinimum);
+                    MeetMinimumReport = ReportController.GenerateReport(ReportName.MeetingMinimum);
+                    MeetMinimumListView.ItemsSource = MeetMinimumReport;
                 }
                 else
                 {
@@ -66,7 +67,8 @@ namespace RAP_WPF.View
             {
                 if (BelowExpectationsReport == null)
                 {
-                    BelowExpectationsListView.ItemsSource = ReportController.GenerateReport(ReportName.BelowExpectation);
+                    BelowExpectationsReport = ReportController.GenerateReport(ReportName.BelowExpectation);
+                    BelowExpectationsListView.ItemsSource = BelowExpectationsReport;
                 }
                 else
                 {
@@ -77,7 +79,8 @@ namespace RAP_WPF.View
             {
                 if (PoorReport == null)
                 {
-                    PoorListView.ItemsSource = ReportController.GenerateReport(ReportName.Poor);
+                    PoorReport = ReportController.GenerateReport(ReportName.Poor);
+                    PoorListView.ItemsSource = PoorReport;
                 }
                 else
                 {
@@ -85,5 +88,31 @@ namespace RAP_WPF.View
                 }
             }
         }
+
+        private void StarPerformerButton_Click(object sender, RoutedEventArgs e)
+        {
+            var emails = ReportController.CopyAllEmails(StarPerformerReport);
+            MessageBox.Show("Emails are copied: " + String.Join("; ", emails));
+        }
+
+        private void MeetMinimumButton_Click(object sender, RoutedEventArgs e)
+        {
+            var emails = ReportController.CopyAllEmails(MeetMinimumReport);
+            MessageBox.Show("Emails are copied: " + String.Join("; ", emails));
+        }
+
+        private void BelowExpectationsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var emails = ReportController.CopyAllEmails(BelowExpectationsReport);
+            MessageBox.Show("Emails are copied: " + String.Join("; ", emails));
+        }
+
+        private void PoorButton_Click(object sender, RoutedEventArgs e)
+        {
+            var emails = ReportController.CopyAllEmails(PoorReport);
+            MessageBox.Show("Emails are copied: " + String.Join("; ", emails));
+        }
+
+        
     }
 }
