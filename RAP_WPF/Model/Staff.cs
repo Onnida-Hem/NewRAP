@@ -20,7 +20,7 @@ namespace RAP_WPF.Model
             }
         }
 
-        public double Average3Year 
+        public double Average3Year
         {
             get
             {
@@ -49,7 +49,10 @@ namespace RAP_WPF.Model
         {
             get
             {
-                return PublicationCount / TenureYear;
+                if (TenureYear == 0)
+                    return 0;
+                else
+                    return PublicationCount / TenureYear;
             }
         }
 
@@ -57,7 +60,10 @@ namespace RAP_WPF.Model
         {
             get
             {
-                return Math.Round(FundingReceived / TenureYear, 1);
+                if (TenureYear == 0)
+                    return 0;
+                else
+                    return Math.Round(FundingReceived / TenureYear, 1);
             }
         }
 

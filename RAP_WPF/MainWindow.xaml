@@ -26,7 +26,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button Content="Report" HorizontalAlignment="Left" Margin="20,410,0,0" VerticalAlignment="Top" Width="218" Background="DodgerBlue" Click="ReportButton_Click"/>
+            <Button Content="Report" HorizontalAlignment="Left" Margin="20,410,0,0" VerticalAlignment="Top" Width="218" Background="DodgerBlue" Foreground="White" Click="ReportButton_Click"/>
         </Grid>
 
         <StackPanel x:Name="ResearcherDetailView" Grid.Column="1" Margin="0,10,0,0">

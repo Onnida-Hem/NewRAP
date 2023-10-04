@@ -29,10 +29,16 @@ namespace RAP_WPF.View
 
         public ReportView()
         {
-            ReportController.GenerateAllReport();
+            if (ReportController.ReportList.Count() == 0)
+            {
+                ReportController.GenerateAllReport();
+            }
             InitializeComponent();
-            StarPerformerReport = ReportController.GenerateReport(ReportName.StarPerformer);
-            StarPerformerListView.ItemsSource = StarPerformerReport;
+            if (StarPerformerReport == null)
+            {
+                StarPerformerReport = ReportController.GenerateReport(ReportName.StarPerformer);
+                StarPerformerListView.ItemsSource = StarPerformerReport;
+            }
             DataContext = this;
         }
 
@@ -42,7 +48,7 @@ namespace RAP_WPF.View
         {
             if (StarPerformerTab.IsSelected)
             {
-                if (MeetMinimumReport == null)
+                if (StarPerformerReport == null)
                 {
                     StarPerformerListView.ItemsSource = ReportController.GenerateReport(ReportName.StarPerformer);
                 }
@@ -113,6 +119,6 @@ namespace RAP_WPF.View
             MessageBox.Show("Emails are copied: " + String.Join("; ", emails));
         }
 
-        
+
     }
 }
