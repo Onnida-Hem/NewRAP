@@ -100,7 +100,7 @@
                     <Label Content="To: Year" HorizontalAlignment="Left" Margin="295,10,0,0" VerticalAlignment="Top" Height="25"/>
                     <ComboBox Name="ToYearComboBox" HorizontalAlignment="Left" Margin="295,35,0,0" VerticalAlignment="Top" Width="80" ItemsSource="{Binding Year}"/>
 
-                    <Button Content="Button" HorizontalAlignment="Left" Margin="390,35,0,0" VerticalAlignment="Top" Width="60" Click="FromToYearButton_Click"/>
+                    <Button Content="Filter" HorizontalAlignment="Left" Margin="390,35,0,0" VerticalAlignment="Top" Width="60" Click="FromToYearButton_Click"/>
                     
                     <ListView x:Name="PublicationListView" HorizontalAlignment="Left" Height="200" Margin="20,75,0,0" VerticalAlignment="Top" Width="430" SelectionChanged="PublicationListView_SelectionChanged">
                         <ListView.View>

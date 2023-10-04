@@ -375,55 +375,5 @@ namespace RAP_WPF.Database
             return publicationDetail;
         }
         #endregion
-
-        #region [Report]
-        /*public static string FetchDataForReport()
-        {
-                List<Researcher> supervisionList = new List<Researcher>();
-
-            MySqlConnection conn = GetConnection();
-            MySqlDataReader rdr = null;
-
-            try
-            {
-                conn.Open();
-
-                MySqlCommand cmd = new MySqlCommand("SELECT researcher.id, researcher_publication.doi, publication.year FROM researcher "+
-                                                    "JOIN researcher_publication ON researcher.id = researcher_publication.researcher_id " +
-                                                    "JOIN publication ON publication.doi = researcher_publication.doi "+
-                                                    "WHERE researcher.type = 'Staff'");
-                rdr = cmd.ExecuteReader();
-
-                while (rdr.Read())
-                {
-                    supervisionList.Add(new Researcher
-                    {
-                        ID = rdr.GetString(0),
-                        GivenName = rdr.GetString(1),
-                        FamilyName = rdr.GetString(2),
-                        ResearcherTitle = rdr.GetString(3),
-                        Type = ParseEnum<ResearcherType>(rdr.GetString(4))
-                    });
-                }
-            }
-            catch (MySqlException e)
-            {
-                Console.WriteLine("Error connecting to database: " + e);
-            }
-            finally
-            {
-                if (rdr != null)
-                {
-                    rdr.Close();
-                }
-                if (conn != null)
-                {
-                    conn.Close();
-                }
-            }
-
-            return supervisionList;
-        }*/
-        #endregion
     }
 }

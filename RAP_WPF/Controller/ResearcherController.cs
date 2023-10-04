@@ -65,13 +65,8 @@ namespace RAP_WPF.Controller
             return selectedResearcher;
         }
 
-        public static Researcher ShowResearcherPerformance()
-        {
-            return selectedResearcher;
-        }
-
         //Nida
-        public static List<Researcher> ListSupervision(string selectedResearcherID) //(Staff)
+        public static List<Researcher> ListSupervision(string selectedResearcherID)
         {
             var students = DBAdapter.FetchListSupervision(selectedResearcherID);
             return students;

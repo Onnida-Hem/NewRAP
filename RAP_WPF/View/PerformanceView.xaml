@@ -19,9 +19,9 @@
             <Label Content="Email:" HorizontalAlignment="Left" Margin="45,125,0,0" VerticalAlignment="Top"/>
             <Label Content="Q1 Percentage:" HorizontalAlignment="Left" Margin="45,150,0,0" VerticalAlignment="Top"/>
             <Label Content="3-year Average:" HorizontalAlignment="Left" Margin="45,175,0,0" VerticalAlignment="Top"/>
-            <Label Content="Funding received:" HorizontalAlignment="Left" Margin="45,200,0,0" VerticalAlignment="Top"/>
-            <Label Content="Performance by publication:" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top"/>
-            <Label Content="Performance by funding received:" HorizontalAlignment="Left" Margin="45,250,0,0" VerticalAlignment="Top"/>
+            <Label Content="Funding Received:" HorizontalAlignment="Left" Margin="45,200,0,0" VerticalAlignment="Top"/>
+            <Label Content="Performance by Publication:" HorizontalAlignment="Left" Margin="45,225,0,0" VerticalAlignment="Top"/>
+            <Label Content="Performance by Funding Received:" HorizontalAlignment="Left" Margin="45,250,0,0" VerticalAlignment="Top"/>
             
         </Grid>
         <Grid Grid.Column="1">

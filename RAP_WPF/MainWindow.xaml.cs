@@ -160,12 +160,16 @@ namespace RAP_WPF
                     //FirstPositionStartDate.Content = student.FirstPositionStartDate.ToString("d");
                     //CurrentPositionStartDate.Content = student.CurrentPositionStartDate.ToString("d");
                     Supervisions.Text = "-";
+                    Supervisions.TextDecorations = null;
                     Degree.Content = student.Degree;
                     Supervisor.Content = student.SupervisorName;
                     PositionListView.ItemsSource = new List<Position>();
                 }
 
                 PublicationListView.ItemsSource = PublicationList;
+                SortYearComboBox.SelectedIndex = 0;
+                FromYearComboBox.SelectedIndex = -1;
+                ToYearComboBox.SelectedIndex = -1;
             }
         }
 
@@ -223,17 +227,24 @@ namespace RAP_WPF
             }
             else
             {
-                int fromYear = Convert.ToInt32(FromYearComboBox.SelectedValue.ToString());
-                int toYear = Convert.ToInt32(ToYearComboBox.SelectedValue.ToString());
-
-                if (fromYear > toYear)
+                if (FromYearComboBox.SelectedValue == null || ToYearComboBox.SelectedValue == null)
                 {
-                    Error("From: Year should be more than To: Year!!!");
+                    Error("Please select both of From: Year and To: Year");
                 }
                 else
                 {
-                    bool recentYearFilter = SortYearComboBox.SelectedValue.ToString().Contains("Oldest-") ? false : true;
-                    PublicationListView.ItemsSource = PublicationController.FilterByPublication(fromYear, toYear, recentYearFilter);
+                    int fromYear = Convert.ToInt32(FromYearComboBox.SelectedValue.ToString());
+                    int toYear = Convert.ToInt32(ToYearComboBox.SelectedValue.ToString());
+
+                    if (fromYear > toYear)
+                    {
+                        Error("From: Year should be more than To: Year!!!");
+                    }
+                    else
+                    {
+                        bool recentYearFilter = SortYearComboBox.SelectedValue.ToString().Contains("Oldest-") ? false : true;
+                        PublicationListView.ItemsSource = PublicationController.FilterByPublication(fromYear, toYear, recentYearFilter);
+                    }
                 }
             }
         }
@@ -253,7 +264,7 @@ namespace RAP_WPF
                 publicationDetailView = new PublicationDetailView(selectedPublication);
 
                 publicationDetailView.Show();
-                
+
             }
         }
 
@@ -265,7 +276,7 @@ namespace RAP_WPF
                 {
                     cumNoOfPublicationView.Close();
                 }
-                
+
                 cumNoOfPublicationView = new CumNoOfPublicationView(SelectedResearcher.CumulativeCountList);
 
                 cumNoOfPublicationView.Show();
@@ -276,7 +287,9 @@ namespace RAP_WPF
         {
             if (SelectedResearcher != null)
             {
-                if (Supervisions.Text != "0" || Supervisions.Text != "-")
+                if (Supervisions.Text.Contains("0") || Supervisions.Text.Contains("-"))
+                { }
+                else
                 {
                     if (publicationDetailView != null)
                     {

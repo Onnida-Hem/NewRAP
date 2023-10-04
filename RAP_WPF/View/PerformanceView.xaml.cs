@@ -39,6 +39,7 @@ namespace RAP_WPF.View
             {
                 var student = (Student)SelectedResearcher;
                 DataContext = student;
+                PercentageQ1.Content = student.PercentageQ1 + "%";
                 Average3Year.Content = "-";
                 FundingReceived.Content = "-";
                 PublicationPerformance.Content = "-";

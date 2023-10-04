@@ -20,7 +20,7 @@
                 <Label Content="Ranking:" HorizontalAlignment="Left" Margin="20,125,0,0" VerticalAlignment="Top"/>
                 <Label Content="Type:" HorizontalAlignment="Left" Margin="20,150,0,0" VerticalAlignment="Top"/>
                 <Label Content="Cite as:" HorizontalAlignment="Left" Margin="20,175,0,0" VerticalAlignment="Top"/>
-                <Label Content="Available date:" HorizontalAlignment="Left" Margin="20,265,0,0" VerticalAlignment="Top"/>
+                <Label Content="Availability date:" HorizontalAlignment="Left" Margin="20,265,0,0" VerticalAlignment="Top"/>
                 <Label Content="Age:" HorizontalAlignment="Left" Margin="20,290,0,0" VerticalAlignment="Top"/>
             </Grid>
             <Grid Grid.Column="1" Margin="0,15,20,10" x:Name="PublicationDetailGrid">
