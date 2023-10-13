@@ -29,8 +29,8 @@ namespace RAP_WPF.View
             {
                 var staff = (Staff)SelectedResearcher;
                 DataContext = staff;
-                PercentageQ1.Content = staff.PercentageQ1 + "%";
-                Average3Year.Content = staff.Average3Year + "%";
+                PercentageQ1.Content = Math.Round(staff.PercentageQ1, 1) + "%";
+                Average3Year.Content = Math.Round(staff.Average3Year,1) + "%";
                 FundingReceived.Content = staff.FundingReceived.ToString("N0") + " AUD";
                 PublicationPerformance.Content = staff.PublicationPerformance + " publication/yr.";
                 FundingReceivedPerformance.Content = staff.FundingReceivedPerformance.ToString("N0") + " AUD/yr.";
@@ -39,7 +39,7 @@ namespace RAP_WPF.View
             {
                 var student = (Student)SelectedResearcher;
                 DataContext = student;
-                PercentageQ1.Content = student.PercentageQ1 + "%";
+                PercentageQ1.Content = Math.Round(student.PercentageQ1,1) + "%";
                 Average3Year.Content = "-";
                 FundingReceived.Content = "-";
                 PublicationPerformance.Content = "-";

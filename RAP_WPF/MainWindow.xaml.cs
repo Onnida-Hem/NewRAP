@@ -128,6 +128,7 @@ namespace RAP_WPF
                 PublicationList = PublicationController.ListPublication(researcher.ID);
                 SelectedResearcher = ResearcherController.ShowResearcherDetail(researcher.ID);
 
+                #region PHOTO
                 //from RAPLitev2
                 var photo = new Image();
 
@@ -138,6 +139,7 @@ namespace RAP_WPF
                 ImageSource imageSource = bitmap;
 
                 PhotoImage.Source = imageSource;
+                #endregion
 
                 CurrentJobTitle.Content = Enum.JobTitle(SelectedResearcher.CurrentJobTitle);
 
@@ -181,11 +183,13 @@ namespace RAP_WPF
             }
             else
             {
+                //Close when previous window if it still open
                 if (performanceView != null)
                 {
                     performanceView.Close();
                 }
 
+                //Create and open new window of Performance
                 performanceView = new PerformanceView(SelectedResearcher);
 
                 performanceView.Show();
@@ -194,11 +198,13 @@ namespace RAP_WPF
 
         private void Error(string errormsg)
         {
+            //Close when previous window if it still open
             if (errorWindow != null)
             {
                 errorWindow.Close();
             }
 
+            //Create and open new window of Error
             errorWindow = new ErrorWindow(errormsg);
 
             errorWindow.Show();
@@ -272,11 +278,13 @@ namespace RAP_WPF
         {
             if (SelectedResearcher != null)
             {
+                //Close when previous window if it still open
                 if (cumNoOfPublicationView != null)
                 {
                     cumNoOfPublicationView.Close();
                 }
 
+                //Create and open new window of CumNoOfPublication
                 cumNoOfPublicationView = new CumNoOfPublicationView(SelectedResearcher.CumulativeCountList);
 
                 cumNoOfPublicationView.Show();
@@ -291,11 +299,13 @@ namespace RAP_WPF
                 { }
                 else
                 {
+                    //Close when previous window if it still open
                     if (publicationDetailView != null)
                     {
                         supervisionsView.Close();
                     }
 
+                    //Create and open new window of Supervision
                     supervisionsView = new SupervisionsView(SelectedResearcher);
 
                     supervisionsView.Show();
@@ -305,11 +315,13 @@ namespace RAP_WPF
 
         private void ReportButton_Click(object sender, RoutedEventArgs e)
         {
+            //Close when previous window if it still open
             if (reportView != null)
             {
                 reportView.Close();
             }
 
+            //Create and open new window of Report
             reportView = new ReportView();
 
             reportView.Show();
