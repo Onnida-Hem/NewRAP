@@ -89,6 +89,8 @@ namespace RAP_WPF
         {
             if (e.AddedItems[0] != null)
             {
+                filterByNameTextBox.NameTextBox.Text = string.Empty;
+
                 if (e.AddedItems[0].ToString().StartsWith("All"))
                 {
                     ResearchersListView.ItemsSource = Researchers;
@@ -214,13 +216,28 @@ namespace RAP_WPF
         {
             if (e.AddedItems[0] != null && SelectedResearcher != null)
             {
-                if (e.AddedItems[0].ToString().Contains("Oldest-"))
-                {
-                    PublicationListView.ItemsSource = PublicationController.FilterByPublication(0, 0, false);
-                }
-                else if (e.AddedItems[0].ToString().Contains("Newest-"))
+                int fromYear = FromYearComboBox.SelectedValue != null ? Convert.ToInt32(FromYearComboBox.SelectedValue.ToString()) : 0;
+                int toYear = ToYearComboBox.SelectedValue != null ? Convert.ToInt32(ToYearComboBox.SelectedValue.ToString()) : 0;
+
+                //if (e.AddedItems[0].ToString().Contains("Oldest-"))
+                //{
+                //    PublicationListView.ItemsSource = PublicationController.FilterByPublication(0, 0, false);
+                //}
+                //else if (e.AddedItems[0].ToString().Contains("Newest-"))
+                //{
+                //    PublicationListView.ItemsSource = PublicationList;
+                //}
+
+                if (e.AddedItems[0].ToString().Contains("All"))
                 {
                     PublicationListView.ItemsSource = PublicationList;
+                    FromYearComboBox.SelectedIndex = -1;
+                    ToYearComboBox.SelectedIndex = -1;
+                }
+                else
+                {
+                    bool recentYearFilter = SortYearComboBox.SelectedValue.ToString().Contains("Oldest-") ? false : true;
+                    PublicationListView.ItemsSource = PublicationController.FilterByPublication(fromYear, toYear, recentYearFilter);
                 }
             }
         }

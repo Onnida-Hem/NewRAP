@@ -30,9 +30,9 @@ namespace RAP_WPF.View
         //from Week11_SampleCode
         private void filterByNameTextBox_KeyUp(object sender, RoutedEventArgs e)
         {
-            if (filterByNameTextBox.Text != null)
+            if (NameTextBox.Text != null)
             {
-                mainWindow.ResearchersListView.ItemsSource = ResearcherController.FilterByName(filterByNameTextBox.Text);
+                mainWindow.ResearchersListView.ItemsSource = ResearcherController.FilterByName(NameTextBox.Text);
             }
             else
             {

@@ -95,6 +95,7 @@
 
                     <Label Content="Sort by:" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="25"/>
                     <ComboBox Name="SortYearComboBox" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top" Width="140" SelectedIndex="0" SelectionChanged="SortYearComboBox_SelectionChanged">
+                        <ComboBoxItem>All</ComboBoxItem>
                         <ComboBoxItem>Year(Newest-Oldest)</ComboBoxItem>
                         <ComboBoxItem>Year(Oldest-Newest)</ComboBoxItem>
                     </ComboBox>

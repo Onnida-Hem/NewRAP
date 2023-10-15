@@ -8,6 +8,6 @@
              d:DesignHeight="25" d:DesignWidth="220">
     <Grid>
         <Label Content="Filter by Name :&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25"/>
-        <TextBox x:Name="filterByNameTextBox" HorizontalAlignment="Left" Height="25" Margin="100,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="filterByNameTextBox_KeyUp"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="25" Margin="100,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="filterByNameTextBox_KeyUp"/>
     </Grid>
 </UserControl>
