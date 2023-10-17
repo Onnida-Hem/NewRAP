@@ -168,7 +168,6 @@ namespace RAP_WPF.Database
             return researcher;
         }
 
-        //Nida
         public static List<Position> ListPosition(string selectedResearcherID)
         {
             List<Position> positionList = new List<Position>();
@@ -214,7 +213,6 @@ namespace RAP_WPF.Database
             return positionList;
         }
 
-        //Nida
         public static List<Researcher> FetchListSupervision(string selectedResearcherID)
         {
             List<Researcher> supervisionList = new List<Researcher>();
@@ -265,7 +263,6 @@ namespace RAP_WPF.Database
         #endregion
 
         #region [Publication]
-        //Nida
         public static List<Publication> FetchPublicationDetails()
         {
             List<Publication> publicationList = new List<Publication>();

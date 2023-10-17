@@ -14,7 +14,7 @@ namespace RAP_WPF.Controller
         public static List<Publication> publicationList;
         public static List<Publication> selectedPublicationList;
 
-        //NIDA
+        
         public static List<Publication> ListAllPublication()
         {
             publicationList = DBAdapter.FetchPublicationDetails();

@@ -22,7 +22,7 @@ namespace RAP_WPF.Controller
             return allResearcherList;
         }
 
-        //Nida
+        //Barry
         public static List<Researcher> FilterByName(string nameFilter)
         {
             List<Researcher> filteredResearchers = new List<Researcher>();
@@ -65,14 +65,14 @@ namespace RAP_WPF.Controller
             return selectedResearcher;
         }
 
-        //Nida
+        
         public static List<Researcher> ListSupervision(string selectedResearcherID)
         {
             var students = DBAdapter.FetchListSupervision(selectedResearcherID);
             return students;
         }
 
-        //Nida
+        
         public static List<CumulativeCount> CalCumNoOfPublication()
         {
             List<CumulativeCount> counts = PublicationController.selectedPublicationList
