@@ -24,12 +24,13 @@ namespace RAP_WPF.Model
         {
             get
             {
-                int countPub3Year = (from Publication p in PublicationController.publicationList
+                double countPub3Year = (from Publication p in PublicationController.publicationList
                                      where p.ResearchID == ID &&
-                                     p.PublicationYear < DateTime.Today.Year && p.PublicationYear >= (DateTime.Today.Year - 3) && p.PublicationYear <= (DateTime.Today.Year - 3)
+                                     p.PublicationYear < DateTime.Today.Year && p.PublicationYear >= (DateTime.Today.Year - 3)
                                      select p).Count();
                 double expectedPub = Enum.ExpectationPub(CurrentJobTitle);
                 return Math.Round(countPub3Year / 3 / expectedPub * 100, 1);
+
             }
         }
 
