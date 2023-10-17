@@ -99,23 +99,23 @@ namespace RAP_WPF
                 {
                     ResearchersListView.ItemsSource = ResearcherController.FilterByLevel(Enum.JobLevel.None, Enum.ResearcherType.Student);
                 }
-                else if (e.AddedItems[0].ToString().EndsWith("A"))
+                else if (e.AddedItems[0].ToString().StartsWith("A"))
                 {
                     ResearchersListView.ItemsSource = ResearcherController.FilterByLevel(Enum.JobLevel.A, Enum.ResearcherType.Staff);
                 }
-                else if (e.AddedItems[0].ToString().EndsWith("B"))
+                else if (e.AddedItems[0].ToString().StartsWith("B"))
                 {
                     ResearchersListView.ItemsSource = ResearcherController.FilterByLevel(Enum.JobLevel.B, Enum.ResearcherType.Staff);
                 }
-                else if (e.AddedItems[0].ToString().EndsWith("C"))
+                else if (e.AddedItems[0].ToString().StartsWith("C"))
                 {
                     ResearchersListView.ItemsSource = ResearcherController.FilterByLevel(Enum.JobLevel.C, Enum.ResearcherType.Staff);
                 }
-                else if (e.AddedItems[0].ToString().EndsWith("D"))
+                else if (e.AddedItems[0].ToString().StartsWith("D"))
                 {
                     ResearchersListView.ItemsSource = ResearcherController.FilterByLevel(Enum.JobLevel.D, Enum.ResearcherType.Staff);
                 }
-                else if (e.AddedItems[0].ToString().EndsWith("E"))
+                else if (e.AddedItems[0].ToString().StartsWith("E"))
                 {
                     ResearchersListView.ItemsSource = ResearcherController.FilterByLevel(Enum.JobLevel.E, Enum.ResearcherType.Staff);
                 }
