@@ -29,7 +29,7 @@ namespace RAP_WPF.Model
         {
             get
             {
-                int countPub3Year = (from Publication p in PublicationController.publicationList
+                double countPub3Year = (from Publication p in PublicationController.publicationList
                                      where p.ResearchID == ResearcherID &&
                                      p.PublicationYear < DateTime.Today.Year && p.PublicationYear >= (DateTime.Today.Year - 3)
                                      select p).Count();
